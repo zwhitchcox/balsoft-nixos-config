@@ -82,7 +82,7 @@ in {
     inputs.impermanence.nixosModules.impermanence
     # Eugh
     (let
-      module = (import "${inputs.impermanence}/home-manager.nix" {
+      module = import "${inputs.impermanence}/home-manager.nix" {
         inherit pkgs lib;
         config = lib.recursiveUpdate config.home-manager.users.balsoft {
           home.persistence."${cfg.persistRoot}${cfg.homeDir}" = {
@@ -92,7 +92,7 @@ in {
             removePrefixDirectory = false;
           };
         };
-      });
+      };
     in {
       config.home-manager.users.balsoft = lib.mkIf cfg.enable module.config;
     })

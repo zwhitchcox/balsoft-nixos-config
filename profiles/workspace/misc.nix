@@ -10,7 +10,7 @@
       SYSTEMD_LESS = LESS;
     };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     news.display = "silent";
 
     systemd.user.startServices = true;

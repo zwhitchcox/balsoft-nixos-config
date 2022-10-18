@@ -4,7 +4,7 @@
     services = [ ];
   };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     home.packages = let
       stateless-github-cli = pkgs.writeShellScriptBin "gh" ''
         export GITHUB_TOKEN="''${GITHUB_TOKEN-$(cat ${config.secrets.github_token.decrypted})}"

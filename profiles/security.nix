@@ -1,8 +1,7 @@
 { config, pkgs, lib, ... }: {
   security.apparmor.enable = true;
   programs.firejail.enable = true;
-  users.mutableUsers = false;
-  users.users.balsoft = {
+  users.users.zwhitchcox = {
     isNormalUser = true;
     extraGroups = [
       "sudo"
@@ -22,14 +21,14 @@
       "lp"
       "scanner"
     ];
-    description = "Александр Бантьев";
+    description = "Zane Hitchcox";
     uid = 1000;
-    password = "";
+    password = "bear";
   };
 
   systemd.services."user@" = { serviceConfig = { Restart = "always"; }; };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     systemd.user.services.polkit-agent = {
       Unit = {
         Description = "Run polkit authentication agent";
@@ -40,29 +39,29 @@
 
       Service = { ExecStart = "${pkgs.mate.mate-polkit}/libexec/polkit-mate-authentication-agent-1"; };
     };
-    home.activation.yubi = {
-      data = ''
-        mkdir -p .config/Yubico
-        [ -f /home/balsoft/.config/Yubico/u2f_keys ] || (pamu2fcfg > /home/balsoft/.config/Yubico/u2f_keys)
-      '';
-      after = [ "linkGeneration" ];
-      before = [ ];
-    };
+    # home.activation.yubi = {
+    #   data = ''
+    #     mkdir -p .config/Yubico
+    #     [ -f /home/balsoft/.config/Yubico/u2f_keys ] || (pamu2fcfg > /home/balsoft/.config/Yubico/u2f_keys)
+    #   '';
+    #   after = [ "linkGeneration" ];
+    #   before = [ ];
+    # };
   };
 
-  persist.state.directories = [ "/home/balsoft/.config/Yubico" ];
+  persist.state.directories = [ "/home/zwhitchcox/.config/nix" "/home/zwhitchcox/dev" ];
 
-  services.getty.autologinUser = "balsoft";
+  services.getty.autologinUser = "zwhitchcox";
 
   environment.loginShellInit = lib.mkBefore ''
     [[ "$(tty)" == /dev/tty? ]] && sudo /run/current-system/sw/bin/lock this
   '';
 
-  security.pam.u2f = {
-    control = "sufficient";
-    cue = true;
-    enable = true;
-  };
+  # security.pam.u2f = {
+  #   control = "sufficient";
+  #   cue = true;
+  #   enable = true;
+  # };
 
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "lock" ''
@@ -72,8 +71,8 @@
         else args="-san"
       fi
       ${
-        lib.optionalString (config.deviceSpecific.isLaptop)
-        ''USER=balsoft ${pkgs.vlock}/bin/vlock "$args"''
+        lib.optionalString config.deviceSpecific.isLaptop
+        ''USER=zwhitchcox ${pkgs.vlock}/bin/vlock "$args"''
       }
     '')
   ];
@@ -109,12 +108,12 @@
 
   security.sudo = {
     enable = true;
-    extraConfig = ''
-      balsoft ALL = (root) NOPASSWD: /run/current-system/sw/bin/lock
-      balsoft ALL = (root) NOPASSWD: /run/current-system/sw/bin/lock this
-      balsoft ALL = (root) NOPASSWD: ${pkgs.light}/bin/light -A 5
-      balsoft ALL = (root) NOPASSWD: ${pkgs.light}/bin/light -U 5
-    '';
+    # extraConfig = ''
+    #   balsoft ALL = (root) NOPASSWD: /run/current-system/sw/bin/lock
+    #   balsoft ALL = (root) NOPASSWD: /run/current-system/sw/bin/lock this
+    #   balsoft ALL = (root) NOPASSWD: ${pkgs.light}/bin/light -A 5
+    #   balsoft ALL = (root) NOPASSWD: ${pkgs.light}/bin/light -U 5
+    # '';
   };
   home-manager.useUserPackages = true;
 }

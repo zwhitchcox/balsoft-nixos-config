@@ -1,5 +1,5 @@
 {
-  home-manager.users.balsoft.programs.git = {
+  home-manager.users.zwhitchcox.programs.git = {
     enable = true;
     userEmail = "balsoft@balsoft.ru";
     userName = "Alexander Bantyev";

@@ -1,11 +1,11 @@
 { pkgs, lib, config, inputs, ... }: {
 
   environment.sessionVariables =
-    config.home-manager.users.balsoft.home.sessionVariables // rec {
+    config.home-manager.users.zwhitchcox.home.sessionVariables // rec {
       LESS = "MR";
       LESSHISTFILE = "~/.local/share/lesshist";
 
-      CARGO_HOME = "${config.home-manager.users.balsoft.xdg.dataHome}/cargo";
+      CARGO_HOME = "${config.home-manager.users.zwhitchcox.xdg.dataHome}/cargo";
 
       SYSTEMD_LESS = LESS;
     };

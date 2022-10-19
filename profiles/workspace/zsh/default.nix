@@ -6,7 +6,7 @@
   # A history file is screwed up otherwise :(
   persist.state.directories = [ "/home/balsoft/.local/share/zsh" ];
 
-  home-manager.users.balsoft.programs.zsh = {
+  home-manager.users.zwhitchcox.programs.zsh = {
     enable = true;
     # enableAutosuggestions = true;
     enableCompletion = true;

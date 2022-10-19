@@ -24,7 +24,7 @@
     geary
     github
     gwenview
-    himalaya
+    # himalaya
     nheko
     packages
 

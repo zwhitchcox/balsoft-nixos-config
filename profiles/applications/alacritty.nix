@@ -3,7 +3,7 @@
     cmd = "${pkgs.alacritty}/bin/alacritty";
     desktop = "alacritty";
   };
-  home-manager.users.balsoft.programs.alacritty = {
+  home-manager.users.zwhitchcox.programs.alacritty = {
     enable = true;
     settings = {
 

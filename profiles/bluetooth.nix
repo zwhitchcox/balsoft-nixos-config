@@ -10,7 +10,7 @@
   ];
 
   persist.state.directories = [ "/var/lib/bluetooth" ];
-  home-manager.users.balsoft = let headphones = "CC:98:8B:C0:FC:D2";
+  home-manager.users.zwhitchcox = let headphones = "CC:98:8B:C0:FC:D2";
   in {
     programs.zsh.shellAliases = {
       "hpc" = "bluetoothctl connect ${headphones}";
@@ -18,7 +18,7 @@
     };
 
     wayland.windowManager.sway.config.keybindings = let
-      inherit (config.home-manager.users.balsoft.wayland.windowManager.sway.config)
+      inherit (config.home-manager.users.zwhitchcox.wayland.windowManager.sway.config)
         modifier;
     in {
       "${modifier}+F2" = "exec bluetoothctl connect ${headphones}";

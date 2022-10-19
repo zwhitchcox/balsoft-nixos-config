@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  home-manager.users.balsoft.systemd.user.services.yubikey-touch-detector = {
+  home-manager.users.zwhitchcox.systemd.user.services.yubikey-touch-detector = {
     Service = {
       Environment = [ "PATH=${lib.makeBinPath [ pkgs.gnupg pkgs.yubikey-touch-detector ]}" ];
       ExecStart = toString (pkgs.writeShellScript "yubikey-touch-detector" ''

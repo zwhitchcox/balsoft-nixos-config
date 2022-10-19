@@ -1,5 +1,5 @@
 { pkgs, config, ... }: {
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     systemd.user.services.mako = {
       Service = { ExecStart = "${pkgs.mako}/bin/mako"; };
       Install = {

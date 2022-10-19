@@ -62,7 +62,7 @@ in {
     desktop = "org.gnome.Geary";
   };
 
-  home-manager.users.balsoft = let
+  home-manager.users.zwhitchcox = let
     fonts = config.themes.fonts;
     thm = pkgs.my-lib.thmHash config.themes.colors;
   in {

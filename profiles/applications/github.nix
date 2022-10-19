@@ -1,6 +1,6 @@
 { pkgs, config, ... }: {
   secrets.github_token = {
-    owner = "balsoft";
+    owner = "zwhitchcox";
     services = [ ];
   };
 

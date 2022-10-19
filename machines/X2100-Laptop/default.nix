@@ -22,7 +22,7 @@
     cache.clean.enable = true;
   };
 
-  home-manager.users.balsoft.xdg.configFile."simple-osd/brightness".text =
+  home-manager.users.zwhitchcox.xdg.configFile."simple-osd/brightness".text =
     pkgs.my-lib.genIni {
       default = {
         "backlight backend" = "/sys/class/backlight/intel_backlight";

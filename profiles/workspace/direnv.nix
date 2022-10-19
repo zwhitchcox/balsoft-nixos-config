@@ -1,5 +1,5 @@
 { config, pkgs, lib, inputs, ... }: {
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     programs.direnv = {
       enable = true;
       nix-direnv = {

@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }:
 with import ../../support.nix { inherit lib config; }; {
-  home-manager.users.balsoft.xdg.configFile."okularpartrc".text = genIni {
+  home-manager.users.zwhitchcox.xdg.configFile."okularpartrc".text = genIni {
     "Dlg Accessibility" = {
       RecolorBackground = thmDec.base00;
       RecolorForeground = thmDec.base05;

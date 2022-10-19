@@ -84,7 +84,7 @@ in {
     (let
       module = import "${inputs.impermanence}/home-manager.nix" {
         inherit pkgs lib;
-        config = lib.recursiveUpdate config.home-manager.users.balsoft {
+        config = lib.recursiveUpdate config.home-manager.users.zwhitchcox {
           home.persistence."${cfg.persistRoot}${cfg.homeDir}" = {
             directories = [ ];
             files = allHomeFiles;
@@ -94,7 +94,7 @@ in {
         };
       };
     in {
-      config.home-manager.users.balsoft = lib.mkIf cfg.enable module.config;
+      config.home-manager.users.zwhitchcox = lib.mkIf cfg.enable module.config;
     })
   ];
 

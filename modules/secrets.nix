@@ -144,7 +144,7 @@ in {
 
   config.persist.derivative.directories = [ "/var/secrets" password-store ];
 
-  config.home-manager.users.balsoft = {
+  config.home-manager.users.zwhitchcox = {
     systemd.user.services.activate-secrets = {
       Service = {
         ExecStart = "${activate-secrets}/bin/activate-secrets";

@@ -13,7 +13,7 @@ in {
     encrypted = "${config.environment.sessionVariables.PASSWORD_STORE_DIR}/email/balsoft@balsoft.ru.gpg";
   };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     wayland.windowManager.sway.config.bars = [{
       id = "default";
       trayOutput = "none";

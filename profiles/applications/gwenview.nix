@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }:
 {
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     home.packages = [ pkgs.gwenview ];
     xdg.configFile."gwenviewrc".text = pkgs.my-lib.genIni {
       General = {

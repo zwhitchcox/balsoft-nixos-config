@@ -12,12 +12,12 @@ in {
 
   defaultApplications.editor = {
     cmd = toString (pkgs.writeShellScript "emacsclient-newwindow" ''
-      ${config.home-manager.users.balsoft.programs.emacs.finalPackage}/bin/emacsclient -c "$@"
+      ${config.home-manager.users.zwhitchcox.programs.emacs.finalPackage}/bin/emacsclient -c "$@"
     '');
     desktop = "emacsclient";
   };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     programs.emacs = {
       enable = true;
       package = emacs;

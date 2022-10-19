@@ -32,7 +32,7 @@ in {
     }
   '';
 
-  home-manager.users.balsoft.wayland.windowManager.sway = {
+  home-manager.users.zwhitchcox.wayland.windowManager.sway = {
     enable = true;
     config = rec {
       assigns = {

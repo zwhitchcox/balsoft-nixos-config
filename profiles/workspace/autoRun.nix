@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     programs.nix-index.enable = true;
   };
 

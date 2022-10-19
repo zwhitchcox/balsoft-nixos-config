@@ -10,7 +10,7 @@
     VISUAL = config.defaultApplications.editor.cmd;
   };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     home.activation."mimeapps-remove" = {
       before = [ "checkLinkTargets" ];
       after = [ ];

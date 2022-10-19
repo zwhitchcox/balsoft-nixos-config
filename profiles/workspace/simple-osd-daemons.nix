@@ -16,7 +16,7 @@ let
       value = simple-osd-daemon name;
     }) names);
 in {
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     systemd.user.services = daemons [ "pulseaudio" "mpris" ]
       // pkgs.lib.optionalAttrs (config.deviceSpecific.isLaptop)
       (daemons [ "battery" "brightness" ]);

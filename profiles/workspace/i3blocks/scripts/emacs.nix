@@ -1,5 +1,5 @@
 { config, ... }:
-let ec = "${config.home-manager.users.balsoft.programs.emacs.finalPackage}/bin/emacsclient";
+let ec = "${config.home-manager.users.zwhitchcox.programs.emacs.finalPackage}/bin/emacsclient";
 in
 ''
   [[ $BLOCK_BUTTON -eq 2 ]] && ${ec} --eval "(org-clock-out)" > /dev/null

@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   environment.systemPackages = [ pkgs.copyq ];
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     wayland.windowManager.sway.config = {
       window.commands = [
         {

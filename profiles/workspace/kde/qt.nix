@@ -18,7 +18,7 @@ with pkgs.my-lib; {
     KDEDIRS =
       "/run/current-system/sw:/run/current-system/sw/share/kservices5:/run/current-system/sw/share/kservicetypes5:/run/current-system/sw/share/kxmlgui5";
   };
-  home-manager.users.balsoft = let fonts = config.themes.fonts;
+  home-manager.users.zwhitchcox = let fonts = config.themes.fonts;
   in {
 
     xdg.configFile."kdeglobals".text = with (thmDec config.themes.colors); lib.generators.toGitINI {

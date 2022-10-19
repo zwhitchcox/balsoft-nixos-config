@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     xsession.windowManager.i3.config.startup = [{
       command = "${pkgs.kanshi}/bin/kanshi";
       notification = false;

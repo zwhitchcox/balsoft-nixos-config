@@ -42,7 +42,7 @@
     };
   };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     services.pass-secret-service.enable = true;
 
     systemd.user.services.pass-secret-service = {

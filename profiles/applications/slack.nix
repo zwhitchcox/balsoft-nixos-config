@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  home-manager.users.balsoft.wayland.windowManager.sway.config.startup = [{
+  home-manager.users.zwhitchcox.wayland.windowManager.sway.config.startup = [{
     command = toString (pkgs.writeShellScript "slack" ''
       firefox https://tweag.slack.com &
       sleep 10

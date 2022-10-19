@@ -1,5 +1,5 @@
 { pkgs, config, lib, inputs, ... }: {
-  home-manager.users.balsoft.home.packages = with pkgs;
+  home-manager.users.zwhitchcox.home.packages = with pkgs;
     [
       # Internet
       wget

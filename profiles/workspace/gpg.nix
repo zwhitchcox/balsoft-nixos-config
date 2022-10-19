@@ -4,7 +4,7 @@
 
   persist.derivative.directories = [ "/home/balsoft/.local/share/gnupg" ];
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     services.gpg-agent = {
       enable = true;
       enableSshSupport = true;
@@ -16,14 +16,14 @@
         Environment = lib.mkForce [
           "GPG_TTY=/dev/tty1"
           "DISPLAY=:0"
-          "GNUPGHOME=${config.home-manager.users.balsoft.xdg.dataHome}/gnupg"
+          "GNUPGHOME=${config.home-manager.users.zwhitchcox.xdg.dataHome}/gnupg"
         ];
       };
     };
 
     programs.gpg = {
       enable = true;
-      homedir = "${config.home-manager.users.balsoft.xdg.dataHome}/gnupg";
+      homedir = "${config.home-manager.users.zwhitchcox.xdg.dataHome}/gnupg";
       scdaemonSettings = {
         disable-ccid = true;
         reader-port = "Yubico Yubi";

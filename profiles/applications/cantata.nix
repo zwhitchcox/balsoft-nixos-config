@@ -1,5 +1,5 @@
 { pkgs, config, ... }: {
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     home.packages = [ pkgs.cantata ];
     wayland.windowManager.sway = {
       config = {

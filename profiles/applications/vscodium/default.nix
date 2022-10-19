@@ -4,7 +4,7 @@ let
     source "/etc/profiles/per-user/balsoft/etc/profile.d/hm-session-vars.sh"
     NIX_OZONE_WL=1 \
     exec \
-    ${config.home-manager.users.balsoft.programs.vscode.package}/bin/codium \
+    ${config.home-manager.users.zwhitchcox.programs.vscode.package}/bin/codium \
     --enable-features=UseOzonePlatform \
     --ozone-platform=wayland \
     -w -n \
@@ -16,7 +16,7 @@ let
       (pkgs.writeShellScriptBin "codium-wayland" ''
         NIX_OZONE_WL=1 \
         exec \
-        ${config.home-manager.users.balsoft.programs.vscode.package}/bin/codium \
+        ${config.home-manager.users.zwhitchcox.programs.vscode.package}/bin/codium \
         --enable-features=UseOzonePlatform \
         --ozone-platform=wayland \
         "$@"
@@ -46,7 +46,7 @@ in {
     cmd = "${EDITOR}";
     desktop = "codium-wayland";
   };
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
 
     programs.vscode = {
       enable = true;

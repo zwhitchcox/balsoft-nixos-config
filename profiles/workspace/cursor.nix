@@ -4,7 +4,7 @@
     XCURSOR_PATH = lib.mkForce "/home/balsoft/.icons";
   };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
 
     home.pointerCursor = {
       package = pkgs.breeze-qt5;

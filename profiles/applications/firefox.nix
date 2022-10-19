@@ -9,14 +9,14 @@ in {
   };
   programs.browserpass.enable = true;
 
-  persist.state.directories = [ "/home/balsoft/.mozilla/firefox/default" ];
+  persist.state.directories = [ "/home/zwhitchcox/.mozilla/firefox/default" ];
 
   defaultApplications.browser = {
     cmd = "${pkgs.firefox-wayland}/bin/firefox";
     desktop = "firefox";
   };
 
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     programs.browserpass = {
       enable = true;
       browsers = [ "firefox" ];

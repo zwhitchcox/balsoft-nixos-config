@@ -21,7 +21,7 @@ in {
   ];
   programs.dconf.enable = true;
   services.dbus.packages = with pkgs; [ dconf ];
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     gtk = {
       enable = true;
       iconTheme = {

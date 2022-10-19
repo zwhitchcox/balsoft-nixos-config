@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  home-manager.users.balsoft = {
+  home-manager.users.zwhitchcox = {
     xdg.enable = true;
     xdg.userDirs.enable = true;
   };
